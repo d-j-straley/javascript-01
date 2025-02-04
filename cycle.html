@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id1">My Heading 1</h1>
+
+<button type="button" 
+onclick="cycle()">
+Click Me!</button>
+
+
+<script>
+    /*
+function cycle()
+{
+	let element = document.getElementById ('id1').style.color;
+    if (element == 'red')
+    {
+    	element = 'blue';
+    }
+    else
+    {
+    	element = 'red';
+    }
+}
+*/
+
+function cycle()
+{
+    let element = document.getElementById ('id1');
+    if (element.style.color == 'red')
+    {
+    	element.style.color = 'blue';
+    }
+    else
+    {
+    	element.style.color = 'red';
+    }
+}
+</script>
+</body>
+</html>

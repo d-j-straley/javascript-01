@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses different methods to attach a click event to buttons.</p>
+
+<button id="myBtn1" onclick="heyJack('Go now for it again!')">Try it (direct)</button>
+<button id="myBtn2">Try it (addEventListener with anonymous function)</button>
+<button id="myBtn3">Try it (addEventListener with arrow function)</button>
+<button id="myBtn4">Try it (addEventListener with function reference)</button>
+
+<script>
+document.getElementById("myBtn2").addEventListener("click", function() {
+    heyJack('Go for it 2!');
+});
+
+document.getElementById("myBtn3").addEventListener("click", () => {
+    heyJack('Go for it 3!');
+});
+
+document.getElementById("myBtn4").addEventListener("click", heyJack);
+
+function heyJack(msg) {
+    alert(msg);
+}
+</script>
+
+</body>
+</html>
