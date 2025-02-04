@@ -9,6 +9,12 @@ async function getFile() {
   let myPromise = new Promise(function(resolve) {
     let req = new XMLHttpRequest();
     req.open('GET', "mycar.html");
+    /*
+        I will use the onload event to check the status of the request.
+        Note that I'm setting up the onload event before I send the request.
+        The onload event is triggered when the request has been completed.  
+        This way everything is ready to go before I press the "red button"  LOL.
+    */
     req.onload = function() {
       if (req.status == 200) {
         resolve(req.response);
