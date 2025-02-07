@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+/*
+The provided HTML code demonstrates how to use the XMLHttpRequest object to make an asynchronous HTTP request to a server. This technique is commonly used in web development to fetch data from a server without requiring a full page reload, enhancing the user experience by making web applications more responsive.
+
+The HTML document begins with the <!DOCTYPE html> declaration, followed by the opening <html> tag. Inside the <head> section, a <script> tag contains the JavaScript code that defines the loadDoc function. This function is responsible for creating and sending the HTTP request.
+
+Within the loadDoc function, a new instance of the XMLHttpRequest object is created and assigned to the variable xhttp. The open method of the xhttp object is called to initialize the request, specifying the HTTP method (GET) and the URL (ajax_info.txt) of the resource to be fetched. The send method is then called to send the request to the server.
+
+The onreadystatechange property of the xhttp object is set to a function that will be executed whenever the readyState property of the xhttp object changes. This function checks if the request has completed (readyState is 4) and if the response status is 200 (indicating a successful request). If both conditions are met, the inner HTML of the element with the ID demo is updated with the response text received from the server.
+
+In the <body> section of the HTML document, there is a heading (<h2>) that describes the purpose of the example. Below the heading, a button element is defined with the text "Request data 2". The button has an onclick attribute that calls the loadDoc function when the button is clicked. This triggers the HTTP request and updates the content of the paragraph element with the ID demo based on the server's response.
+
+Overall, this code provides a straightforward example of how to use the XMLHttpRequest object to perform an asynchronous HTTP request and dynamically update the content of a web page based on the server's response. This approach is fundamental in creating interactive and dynamic web applications.
+*/
+
+function loadDoc() 
+{
+    const xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function() 
+    {
+        if (this.readyState == 4 && this.status == 200) 
+        {
+            document.getElementById("demo").innerHTML = this.responseText;
+        }
+    };
+
+    xhttp.open("GET", "ajax_info.txt");
+    xhttp.send();
+
+
+}
+</script>
+</head>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="loadDoc()">Request data 2</button>
+<p id="demo"></p>
+
+<script>
+
+
+</script>
+
+</body>
+</html>
