@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+
+<!-- The provided HTML code demonstrates how to convert a JSON string into a JavaScript object and display one of its properties on a webpage. The HTML structure includes a <body> tag that contains a heading (<h2>) and a paragraph (<p>) with an ID of "demo". This paragraph is where the result will be displayed.
+
+Within the <script> tags, a JSON string is defined and assigned to the constant myJSON. This JSON string represents an object with three properties: "name", "age", and "city". The JSON.parse() method is then used to convert this JSON string into a JavaScript object, which is stored in the constant myObj.
+
+Finally, the code uses document.getElementById("demo").innerHTML to access the paragraph element with the ID "demo" and sets its inner HTML to the value of the "name" property of the myObj object. As a result, the name "John" is displayed in the paragraph on the webpage. This example illustrates the basic process of parsing JSON data and manipulating the DOM to display the parsed data. -->
+
+
+<html>
+<body>
+
+<h2>Convert a JSON string into a JavaScript object.</h2>
+
+<p id="demo"></p>
+
+<script>
+const myJSON = '{"name":"John", "age":31, "city":"New York"}';
+const myObj = JSON.parse(myJSON);
+document.getElementById("demo").innerHTML = myObj.name + ", " + myObj.age;
+</script>
+
+</body>
+</html>
