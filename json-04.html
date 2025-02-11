@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- The provided HTML code demonstrates how to fetch a JSON file using the XMLHttpRequest object and display one of its elements on a webpage. The HTML structure includes a <body> tag that contains a heading (<h2>) and two paragraphs (<p>). The first paragraph explains that the content written as a JSON array will be converted into a JavaScript array, and the second paragraph, with an ID of "demo", is where the result will be displayed.
+
+Within the <script> tags, an instance of XMLHttpRequest is created and assigned to the constant xmlhttp. The onload event handler is defined for this xmlhttp object, which specifies what should happen when the request is successfully completed. Inside this event handler, the response text (which is expected to be a JSON array) is parsed into a JavaScript array using JSON.parse(), and the resulting array is stored in the constant myArr.
+
+The code then uses document.getElementById("demo").innerHTML to access the paragraph element with the ID "demo" and sets its inner HTML to the value of the first element of the myArr array. This means that when the JSON file is successfully fetched and parsed, the first element from the JSON array will be displayed in the paragraph on the webpage.
+
+To initiate the request, the xmlhttp.open("GET", "json_demo_array.txt", true) method is called, specifying the HTTP method "GET" and the URL of the JSON file ("json_demo_array.txt"). The true parameter indicates that the request should be asynchronous. Finally, the xmlhttp.send() method is called to send the request. This example illustrates the process of making an asynchronous HTTP request to fetch JSON data and manipulating the DOM to display the parsed data. -->
+<html>
+<body>
+
+<h2>Fetch a JSON file with XMLHttpRequest</h2>
+<p>Content written as an JSON array will be converted into a JavaScript array.</p>
+<p id="demo"></p>
+
+<script>
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+  const myArr = JSON.parse(this.responseText);
+  document.getElementById("demo").innerHTML = myArr[0];
+}
+xmlhttp.open("GET", "json_demo_array.txt", true);
+xmlhttp.send();
+</script>
+
+</body>
+</html>
