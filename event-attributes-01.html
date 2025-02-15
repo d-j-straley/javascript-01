@@ -1,0 +1,22 @@
+<!-- The onclick attribute is an event attribute that is supported by all browsers. It is used to trigger a function when the user clicks a button. -->
+<!-- The displayDate() function is triggered when the button is clicked. It sets the innerHTML of the <p> element with id="demo" to the current date and time. -->
+    
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onclick Attribute</h2>
+
+<p>Click the button to display the date.</p>
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html> 
