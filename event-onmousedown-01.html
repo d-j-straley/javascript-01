@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<!-- The onmousedown attribute is used to trigger a function when the user presses a mouse button over an element. -->
+<!-- The mDown() function is triggered when the mouse button is pressed down over the <div> element. It sets the background color of the <div> element to "#1ec5e5" and the innerHTML to "Release Me". -->  
+<!-- The mUp() function is triggered when the mouse button is released over the <div> element. It sets the background color of the <div> element to "#D94A38" and the innerHTML to "Thank You". -->
+<!-- The onmousedown attribute is supported in all major browsers such as Chrome, Firefox, Safari, Opera, Internet Explorer, and Microsoft Edge. -->    
+<!-- The onmousedown attribute is often used together with the onmouseup attribute to create a change effect when the mouse button is pressed down over an element. -->
+<!-- The onmousedown attribute is similar to the onmouseup attribute. -->
+<!-- The difference is that the onmouseup attribute is triggered when the mouse button is released, while the onmousedown attribute is triggered when the mouse button is pressed down. -->
+<!-- The onmousedown attribute is often used together with the onmouseup attribute to create a change effect when the mouse button is pressed down over an element.-->
+
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onmousedown Attribute</h2>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+
+<script>
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Thank You";
+}
+</script>
+
+</body>
+</html> 
