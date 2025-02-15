@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+/*
+    The script section contains the myFunction() function, which is responsible for validating the user's input. The function retrieves the value entered in the input field using document.getElementById("numb").value and stores it in the variable x. It then checks if x is not a number (isNaN(x)) or if it is outside the range of 1 to 10. If either condition is true, the variable text is set to "Input not valid"; otherwise, it is set to "Input OK".
+
+    Finally, the function updates the inner HTML of the paragraph with the ID "demo" to display the validation message stored in text. The function returns false to prevent any default form submission behavior. This simple example effectively demonstrates how to perform basic input validation using JavaScript within an HTML document.
+*/
+
+function myFunction() {
+  // Get the value of the input field with id="numb"
+  let x = document.getElementById("numb").value;
+  // If x is Not a Number or less than one or greater than 10
+  let text;
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "Input not valid";
+  } else {
+    text = "Input OK";
+  }
+  document.getElementById("demo").innerHTML = text;
+  return false;
+}
+</script>
+
+</body>
+</html> 
