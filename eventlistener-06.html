@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<!-- Output: When the user clicks on the "Try it" button, an alert box will pop up with the message "Hello World with argument!". -->
+<!-- The addEventListener() method is used to attach an event listener to the button element, listening for the "click" event. When the event occurs (i.e., the button is clicked), the anonymous function defined inline is executed, which in turn calls the myFunction() function with the argument "Hello World with argument!". -->    
+<!-- This demonstrates how you can pass arguments to a function when using addEventListener() to handle events. By defining an anonymous function that calls the desired function with the necessary arguments, you can achieve more flexibility and customization in your event handling logic. -->
+<!-- The addEventListener() method is a powerful tool for creating dynamic and interactive web applications. It allows developers to define custom event handlers and respond to user actions in a flexible and efficient manner. By attaching event listeners to specific elements on the page, developers can create interactive features that enhance the user experience and make the website more engaging and responsive. -->
+<!-- The addEventListener() method is supported by all modern web browsers and is the recommended approach for handling events in JavaScript. It is part of the DOM Events API, which provides a standardized way to work with events in web applications. -->
+<!-- The addEventListener() method is preferred over the traditional "on" event attributes (e.g., onclick, onmouseover) because it provides better separation of concerns and allows for more flexibility and control over event handling. -->
+<!-- The addEventListener() method allows for multiple event listeners to be attached to the same element, enabling more complex interactions and behaviors. -->
+
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to execute a function with an argument when a user clicks on a button.</p>
+
+<button id="myBtn">Try it</button>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", function() {
+  myFunction("Hello World with argument!");
+});
+
+function myFunction(message) {
+  alert(message);
+}
+</script>
+
+</body>
+</html>
+
+
