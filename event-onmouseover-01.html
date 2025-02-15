@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<!-- The onmouseover attribute is used to trigger a function when the user moves the mouse over an element. -->
+<!-- The mOver() function is triggered when the mouse pointer is moved over the <div> element. It sets the innerHTML of the <div> element to "Thank You". -->   
+<!-- The mOut() function is triggered when the mouse pointer is moved out of the <div> element. It sets the innerHTML of the <div> element to "Mouse Over Me". -->
+<!-- The onmouseover attribute is supported in all major browsers such as Chrome, Firefox, Safari, Opera, Internet Explorer, and Microsoft Edge. -->
+<!-- The onmouseover attribute is often used together with the onmouseout attribute to create a change effect when the mouse moves over an element. -->
+<!-- The onmouseover attribute is similar to the onmouseenter attribute. -->
+<!-- The difference is that the onmouseenter attribute does not bubble up the DOM hierarchy, while the onmouseover attribute does. -->
+<!-- The onmouseover attribute is often used together with the onmouseout attribute to create a change effect when the mouse moves over an element. -->
+
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onmouseover Attribute</h2>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
+
+<script>
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Mouse Over Me"
+}
+</script>
+
+</body>
+</html> 
+
+
