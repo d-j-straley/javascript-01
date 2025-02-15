@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<!-- The onchange event occurs when the value of an element has been changed. -->
+<!-- For text fields or text areas, the onchange event occurs when the field loses focus, after the content has been changed. 
+In other words, this event happens after at least 1 character has been entered and the user clicks somewhere else on the page or clicks off the page altogether. -->
+<!-- The onchange event is often used in combination with validation of input fields. -->
+<!-- The onchange event is similar to the oninput event. -->    
+<!-- The difference is that the oninput event occurs immediately after the value of an element has changed, while onchange occurs when the element loses focus, after the content has been changed. -->
+<!-- The onchange event is supported in all major browsers such as Chrome, Firefox, Safari, Opera, Internet Explorer, and Microsoft Edge. -->
+<!-- The onchange event is often used together with the onkeyup event to perform an action after the user has finished typing. -->
+<!-- The onchange event is similar to the onkeyup event. -->
+
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onchange Attribute</h2>
+
+Enter your name: <input type="text" id="fname" onchange="upperCase()">
+<p>When you leave the input field, a function transforms the input to upper case.</p>
+
+<script>
+function upperCase() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+</body>
+</html>
