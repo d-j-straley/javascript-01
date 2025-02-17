@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<!-- The code creates a new paragraph element and adds it to the div element with the id div1.
+The output of the above code will be:
+Add a new HTML Element.
+This is a paragraph.
+This is another paragraph.
+This is new. -->
+
+
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<h3>Remove an HTML Element.</h3>
+
+<div>
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<button onclick="myFunction()">Remove Element</button>
+
+<script>
+function myFunction() {
+document.getElementById("p1").remove();
+}
+</script>
+
+</body>
+</html>
