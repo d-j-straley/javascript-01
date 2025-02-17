@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+    <!-- The code creates a new paragraph element and adds it to the div element with the id div1. 
+    The output of the above code will be: 
+    Add a new HTML Element. 
+    This is a paragraph.
+    This is another paragraph.
+    This is new. -->
+
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<p>Add a new HTML Element.</p>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+const para = document.createElement("p");
+const node = document.createTextNode("This is new.");
+para.appendChild(node);
+const element = document.getElementById("div1");
+element.appendChild(para);
+</script>
+
+</body>
+</html>
+    
+
