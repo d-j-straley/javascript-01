@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+
+<!-- Output: When the user clicks on the "Try it" button, the color of all p elements on the page will change from green to red, or from red to green. 
+ 
+ The provided HTML file demonstrates how to use JavaScript to manipulate the HTML DOM by changing the color of all <p> elements on the page when a button is clicked. The document starts with the standard <!DOCTYPE html> declaration, followed by the opening <html> and <body> tags. Within the body, there is a heading (<h2>JavaScript HTML DOM</h2>) and three paragraphs (<p>) with some text.
+
+A button with the text "Try it" is provided, and when clicked, it triggers the myFunction() JavaScript function.
+
+The script section contains the following JavaScript code:
+
+A global variable color is initialized with the value "green".
+
+The myFunction() function is defined. This function:
+
+Retrieves all <p> elements on the page using document.getElementsByTagName("p") and stores them in the myCollection variable.
+Checks the current value of the color variable. If it is "green", it changes the value to "red". Otherwise, it changes the value back to "green".
+Calls the changeColor() function, passing myCollection and the updated color as arguments.
+The changeColor() function is defined. This function:
+
+Takes two parameters: myCollection (a collection of <p> elements) and color (the color to change to).
+Iterates over the myCollection using a for loop and sets the style.color property of each <p> element to the specified color.
+When the button is clicked, the myFunction() function is executed, which toggles the color of all <p> elements between green and red. This example demonstrates how to use JavaScript to interact with and manipulate the HTML DOM to create dynamic and interactive web pages.
+
+-->
+
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Hello #1</p>
+
+<p>Hello #2</p>
+
+<p>Click the button to change the color of all p elements.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+
+let color = "green";
+
+function myFunction() {
+  const myCollection = document.getElementsByTagName("p");
+
+  if (color === "green") 
+  {
+    color = "red";
+  } 
+  else 
+  {
+    color = "green";
+  }
+  changeColor(myCollection, color);
+}
+
+function changeColor(myCollection, color) {
+
+  for (let i = 0; i < myCollection.length; i++) {
+    myCollection[i].style.color = color;
+  }
+}
+</script>
+
+</body>
+</html>
