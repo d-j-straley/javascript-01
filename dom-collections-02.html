@@ -33,31 +33,34 @@ When the button is clicked, the myFunction() function is executed, which toggles
 
 <p>Hello #2</p>
 
+<p>Click the button to change the color of all p elements.  
+  Except that this time we use a different function: document.quertySelectorAll() 
+</p>
 
 <button onclick="myFunction()">Try it</button>
 
 <script>
 
-let color = "green";
+let color = "blue";
 
 function myFunction() {
-  const myCollection = document.getElementsByTagName("p");
+  const myNodeList = document.querySelectorAll("p");
 
-  if (color === "green") 
+  if (color === "blue") 
   {
-    color = "red";
+    color = "purple";
   } 
   else 
   {
-    color = "green";
+    color = "blue";
   }
-  changeColor(myCollection, color);
+  changeColor(myNodeList, color);
 }
 
-function changeColor(myCollection, color) {
+function changeColor(myNodeList, color) {
 
-  for (let i = 0; i < myCollection.length; i++) {
-    myCollection[i].style.color = color;
+  for (let i = 0; i < myNodeList.length; i++) {
+    myNodeList[i].style.color = color;
   }
 }
 </script>
