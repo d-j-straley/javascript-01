@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+
+<!-- The provided HTML file demonstrates the use of JavaScript timing functions to create a delay before executing a function. The document starts with the standard <!DOCTYPE html> declaration, followed by the opening <html> and <body> tags. Within the body, there is a heading (<h2>JavaScript Timing</h2>) and several paragraphs explaining the functionality.
+
+The page contains two buttons:
+
+A "Try it" button that, when clicked, sets a timeout to execute the myFunction function after 3 seconds.
+A "Stop it" button that, when clicked, clears the timeout and prevents the myFunction function from executing if it hasn't already.
+The script section contains the following JavaScript code:
+
+The myFunction function is defined, which simply displays an alert with the message "Hello".
+
+The setTimeout function is used to call myFunction after a delay of 3000 milliseconds (3 seconds). The result of setTimeout is stored in the variable myVar.
+
+The clearTimeout function is used to cancel the timeout set by setTimeout if it is called before the 3 seconds are up.
+
+When the "Try it" button is clicked, the setTimeout function schedules the myFunction function to be executed after 3 seconds. If the "Stop it" button is clicked before the 3 seconds are up, the clearTimeout function cancels the scheduled execution of myFunction, preventing the alert from appearing. This example demonstrates how to use JavaScript timing functions to create delays and how to cancel them if needed. -->
+
+
+<html>
+<body>
+
+<h2>JavaScript Timing</h2>
+
+<p>Click "Try it". Wait 3 seconds. The page will alert "Hello".</p>
+<p>Click "Stop" to prevent the first function to execute.</p>
+<p>(You must click "Stop" before the 3 seconds are up.)</p>
+
+<button onclick="myVar = setTimeout(myFunction, 3000)">Try it</button>
+
+<button onclick="clearTimeout(myVar)">Stop it</button>
+
+<script>
+
+let myVar; // actually optional, but good practice to declare it
+function myFunction() {
+  alert("Hello");
+}
+</script>
+</body>
+</html>
