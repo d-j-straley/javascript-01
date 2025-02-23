@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo">Fetch a file to change this text.</p>
+<script>
+
+let file = "fetch_info.txt"
+
+/*
+check out this syntax!  This accomplishes the same thing as my
+previous example, but in a more concise way.  The fetch() method
+is used to fetch a resource from the network.  It returns a promise
+that resolves to the Response to that request, whether it is successful
+or not.  You can also define a default value to return if the promise
+is rejected.
+Note that this function is not declared as async, and does not use
+the await keyword.  This is because the fetch() method is already
+asynchronous, and returns a promise.  The then() method is used to
+handle the promise returned by the fetch() method. 
+In other words, this is the same end-result as if it were
+to use async and await, but it is done in a more concise way.
+It's like saying:
+1.) fetch the file and put the result into an object called x
+2.) take the text from x and put it into an object called y
+3.) put the text from y into the element with the id of "demo".
+Pretty crazy.
+*/
+fetch (file)
+.then(x => x.text())
+.then(y => document.getElementById("demo").innerHTML = y);
+
+</script>
+</body>
+</html>
