@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<!-- The provided HTML document demonstrates the use of JavaScript functions, specifically focusing on the rest parameter. The document begins with the standard HTML structure, including the opening `<html>` and `<body>` tags. Within the body, there are headings (`<h1>` and `<h2>`) that introduce the topic of JavaScript functions and the rest parameter.
+
+The rest parameter, denoted by three dots (`...`), allows a function to accept an indefinite number of arguments as an array. This is explained in a paragraph within the document. Following this, there are two empty paragraphs with IDs "demo" and "numArgs", which will be used to display the results of the JavaScript function.
+
+The script section contains the core functionality. A variable `nArgs` is declared and initialized to 0. This variable will be used to count the number of arguments passed to the `sum` function. The `sum` function is defined using the rest parameter syntax (`...args`), allowing it to accept any number of arguments as an array.
+
+Inside the `sum` function, a variable `sum` is initialized to 0. The function then iterates over each argument using a `for...of` loop. For each argument, the value is added to the `sum` variable, and the `nArgs` variable is incremented by 1 to count the argument. After the loop completes, the function returns the total sum of the arguments.
+
+The script then calls the `sum` function with a series of numbers: 4, 9, 16, 25, 29, 100, 66, and 77. The result of this function call is stored in the variable `x`. Finally, the script updates the inner HTML of the two previously empty paragraphs. The element with the ID "demo" is updated to display the total sum of the numbers, and the element with the ID "numArgs" is updated to display the total number of arguments passed to the `sum` function, formatted as "Number of Args = " followed by the count. This example effectively illustrates how to use the rest parameter in JavaScript to handle an indefinite number of function arguments and perform operations on them. -->
+
+<html>
+<body>
+<h1>JavaScript Functions</h1>
+<h2>The Rest Parameter</h2>
+
+<p>The rest parameter (...) allows a function to treat an indefinite number of arguments as an array:</p>
+
+<p id="demo"></p>
+<p id="numArgs"></p>
+
+<script>
+let nArgs = 0;
+function sum(...args) {
+  let sum = 0;
+
+  for (let arg of args) 
+  {
+  	sum += arg;
+    nArgs++;
+  }
+  return sum;
+}
+
+let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+
+document.getElementById("demo").innerHTML = x;
+document.getElementById("numArgs").innerHTML = "Number of Args = " + nArgs;
+</script>
+
+</body>
+</html>
