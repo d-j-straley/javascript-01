@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<!-- The provided HTML document demonstrates the use of JavaScript function constructors to create objects. The document starts with the standard HTML structure, including the opening <html> and <body> tags. Within the body, there is a heading (<h2>JavaScript Functions</h2>) and a paragraph explaining that the myFunction is a function constructor.
+
+Function constructors in JavaScript are used to create objects. In this example, the myFunction constructor is defined to accept two arguments, arg1 and arg2. Inside the constructor, the this keyword is used to assign the values of arg1 and arg2 to the properties firstName and lastName of the newly created object.
+
+Two instances of the myFunction constructor are created using the new keyword. The first instance, myObj, is created with the arguments "John" and "Doe", resulting in an object with firstName set to "John" and lastName set to "Doe". The second instance, mObj2, is created with the arguments "Dave" and "Straley", resulting in an object with firstName set to "Dave" and lastName set to "Straley".
+
+The script then updates the inner HTML of two HTML elements with the IDs "demo" and "demo2". The element with the ID "demo" is updated to display the firstName property of the myObj object, which is "John". Similarly, the element with the ID "demo2" is updated to display the firstName property of the mObj2 object, which is "Dave". This example effectively demonstrates how to use function constructors in JavaScript to create objects and access their properties. -->
+
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>In this example, myFunction is a function constructor:</p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+function myFunction(arg1, arg2) {
+  this.firstName = arg1;
+  this.lastName  = arg2;
+}
+
+const myObj = new myFunction("John","Doe");
+const myObj2 = new myFunction("Dave", "Straley");
+document.getElementById("demo").innerHTML = myObj.firstName; 
+document.getElementById("demo2").innerHTML = myObj2.firstName;
+</script>
+
+</body>
+</html>
