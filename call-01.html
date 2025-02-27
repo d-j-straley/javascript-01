@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<!-- The provided HTML document demonstrates the use of JavaScript's `call` method to invoke a function with a specified `this` value and arguments. The document starts with the standard HTML structure, including the opening `<html>` and `<body>` tags. Within the body, there is a heading (`<h2>JavaScript Functions</h2>`) and a paragraph explaining that the example calls the `fullName` method of the `person` object, using it on `person1`.
+
+The script section contains the core functionality. First, an object named `person` is defined with a method `fullName`. This method takes two parameters, `city` and `country`, and returns a string that combines the `firstName` and `lastName` properties of the object it is called on, along with the provided `city` and `country`.
+
+Two additional objects, `person1` and `person2`, are defined with `firstName` and `lastName` properties. `person1` has the `firstName` "John" and `lastName` "Doe", while `person2` has the `firstName` "Mary" and `lastName` "Doe".
+
+The `call` method is then used to invoke the `fullName` method of the `person` object, but with `person1` as the `this` value. This means that within the `fullName` method, `this.firstName` and `this.lastName` will refer to the properties of `person1`. The `call` method also passes the arguments "Oslo" and "Norway" to the `fullName` method.
+
+Finally, the result of the `fullName` method call is assigned to the inner HTML of the HTML element with the ID "demo". This result is the string "John Doe, Oslo, Norway", which is displayed on the web page. This example effectively demonstrates how to use the `call` method to invoke a function with a specific `this` value and arguments in JavaScript.
+ -->
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>This example calls the fullName method of person, using it on person1:
+</p>
+
+<p id="demo"></p>
+
+<script>
+const person = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + ", " + city + ", " + country;
+  }
+}
+
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+
+const person2 = {
+  firstName:"Mary",
+  lastName: "Doe"
+}
+
+document.getElementById("demo").innerHTML = person.fullName.call(person1, "Oslo", "Norway"); 
+</script>
+
+</body>
+</html>
+
+
